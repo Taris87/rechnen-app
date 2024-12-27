@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  text-align: center;
+  background-color: lightgreen;
+  font-family: cursive;
+}
+
+.form {
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  margin: 10px;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 30px;
+  text-align: center;
+  padding: 10px;
+  border: solid 4px lightgreen;
+}
+
+.input::placeholder {
+  color: lightgray;
+  font-family: cursive;
+}
+
+.btn {
+  background-color: lightgreen;
+  color: lightcoral;
+  border: none;
+  display: inline-block;
+  width: 30%;
+  border-radius: 100px;
+  padding: 10px;
+  font-family: cursive;
+  font-size: 20px;
+  margin: 20px 0;
+  box-shadow: 0 2px 4px rgb(0, 0, 0, 0.3);
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.btn:hover {
+  transition: ease-in-out 0.7s;
+  color: lightgreen;
+}
+
+.btn span {
+  position: relative;
+  z-index: 1;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  background-color: lightcoral;
+  color: lightgreen;
+  width: 0px;
+  height: 0px;
+  left: var(--xPos);
+  top: var(--yPos);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  transition: width 0.7s, height 0.7s;
+}
+
+.btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.score {
+  color: lightcoral;
+  text-align: right;
+}
